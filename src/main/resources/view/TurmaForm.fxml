@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="15.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TurmaFormController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label style="-fx-font-size: 18pt; -fx-font-weight: bold;" text="Formulário de Turma" />
+    <GridPane hgap="10.0" vgap="10.0">
+        <Label text="Semestre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="txtSemestre" promptText="Ex: 2023.1" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Disciplina:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <ComboBox fx:id="comboDisciplina" prefWidth="250.0" promptText="Selecione a disciplina" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Professor:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <ComboBox fx:id="comboProfessor" prefWidth="250.0" promptText="Selecione o professor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Horário:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="txtHorario" promptText="Ex: Seg/Qua 19:00-21:00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    </GridPane>
+    <HBox alignment="CENTER_RIGHT" spacing="10.0">
+        <Button fx:id="btnSalvar" onAction="#salvar" text="Salvar" />
+        <Button onAction="#cancelar" text="Cancelar" />
+    </HBox>
+</VBox>
